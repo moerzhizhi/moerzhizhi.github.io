@@ -111,7 +111,7 @@
   <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://blog.moerzhizhi.com/uncategorized/hello-world">
+<meta property="og:url" content="https://moerzhizhi.com/uncategorized/hello-world">
 <meta property="og:site_name" content="默而识之">
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="zh-CN">
@@ -125,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="https://blog.moerzhizhi.com/uncategorized/hello-world"/>
+  <link rel="canonical" href="https://moerzhizhi.com/uncategorized/hello-world"/>
 
 
 
@@ -140,6 +140,15 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119880888-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-119880888-1');
+</script>
 
 
 
@@ -284,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://blog.moerzhizhi.com/uncategorized/hello-world">
+    <link itemprop="mainEntityOfPage" href="https://moerzhizhi.com/uncategorized/hello-world">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hetoo">
@@ -678,7 +687,7 @@
   
     <script type="text/javascript">
       var disqus_config = function () {
-        this.page.url = 'https://blog.moerzhizhi.com/uncategorized/hello-world';
+        this.page.url = 'https://moerzhizhi.com/uncategorized/hello-world';
         this.page.identifier = 'uncategorized/hello-world';
         this.page.title = 'Hello World';
         };
