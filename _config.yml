@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Pale Blue Dot
-subtitle:
-description: in silence and in hope shall your strength be
-author: Jirair He
-language: zh-cn
-timezone:
+title: 默而识之
+subtitle: 所学甚杂，不求甚解。
+description: To ask nothing. To expect nothing. To depend on nothing.
+author: Hetoo
+language: zh-CN
+timezone: 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://icemberry.com
+url: https://moerzhizhi.com
 root: /
-permalink: :category/:year/:title/
+permalink: :category/:title
 permalink_defaults:
 
 # Directory
@@ -30,7 +30,7 @@ skip_render:
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
-titlecase: true # Transform title into titlecase
+titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
@@ -72,15 +72,11 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: anatole
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
-
-archive_generator:
-  per_page: 0  
-  yearly: false
-  monthly: false
-  daily: false
+  type: git
+  repo: https://github.com/moerzhizhi/moerzhizhi.github.io.git
+  branch: master
