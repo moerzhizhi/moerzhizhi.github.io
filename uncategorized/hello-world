@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="默而识之">
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-25T04:04:35.390Z">
+<meta property="og:updated_time" content="2018-05-31T02:17:05.943Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World">
 <meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
@@ -335,7 +335,7 @@
                 
               
 
-              <time title="创建时间：2018-05-25 12:04:35" itemprop="dateCreated datePublished" datetime="2018-05-25T12:04:35+08:00">2018-05-25</time>
+              <time title="创建时间：2018-05-31 10:17:05" itemprop="dateCreated datePublished" datetime="2018-05-31T10:17:05+08:00">2018-05-31</time>
             
 
             
@@ -390,6 +390,7 @@
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>THIS is a TEST mesage!</p>
 
       
     </div>
