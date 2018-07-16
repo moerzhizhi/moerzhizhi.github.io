@@ -5,7 +5,7 @@
 # Site
 title: 默而识之
 subtitle: 所学甚杂，不求甚解。
-description: To ask nothing. \nTo expect nothing. \nTo depend on nothing.
+description: To ask nothing. \nTo expect nothing. To depend on nothing.
 author: Hetoo
 language: zh-CN
 timezone: 
@@ -14,7 +14,7 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://moerzhizhi.com
 root: /
-permalink: :month-:day-:year/:title/
+permalink: :year-:month-:day/:title/
 permalink_defaults:
 
 # Directory
