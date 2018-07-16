@@ -5,7 +5,10 @@
 # Site
 title: 默而识之
 subtitle: 所学甚杂，不求甚解。
-description: To ask nothing. \n To expect nothing. \n To depend on nothing.
+description: |
+ To ask nothing.
+ To expect nothing.
+ To depend on nothing.
 author: Hetoo
 language: zh-CN
 timezone: 
