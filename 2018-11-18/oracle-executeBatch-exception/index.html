@@ -108,23 +108,24 @@
 
 
 
-  <meta name="description" content="To ask nothing. To expect nothing. To depend on nothing.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="默而识之">
-<meta property="og:url" content="https://moerzhizhi.com/archives/index.html">
+  <meta name="description" content="问题在使用 JDBC 的 PreparedStatement.executeBatch() 接口向 Oracle 数据库批量插入数据时，出现数组越界异常。 解决过程通过观察异常信息，是 Oralce JDBC 驱动的内部方法出现了数组越界异常。为了搞清楚实际原因，在社区找到了一篇帖子。其中的一个回复写道：  The 10g driver apparently keeps a global seri">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oracle executeBatch异常：ArrayIndexOutOfBoundsException">
+<meta property="og:url" content="https://moerzhizhi.com/2018-11-18/oracle-executeBatch-exception/index.html">
 <meta property="og:site_name" content="默而识之">
-<meta property="og:description" content="To ask nothing. To expect nothing. To depend on nothing.">
+<meta property="og:description" content="问题在使用 JDBC 的 PreparedStatement.executeBatch() 接口向 Oracle 数据库批量插入数据时，出现数组越界异常。 解决过程通过观察异常信息，是 Oralce JDBC 驱动的内部方法出现了数组越界异常。为了搞清楚实际原因，在社区找到了一篇帖子。其中的一个回复写道：  The 10g driver apparently keeps a global seri">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-11-18T09:16:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="默而识之">
-<meta name="twitter:description" content="To ask nothing. To expect nothing. To depend on nothing.">
+<meta name="twitter:title" content="Oracle executeBatch异常：ArrayIndexOutOfBoundsException">
+<meta name="twitter:description" content="问题在使用 JDBC 的 PreparedStatement.executeBatch() 接口向 Oracle 数据库批量插入数据时，出现数组越界异常。 解决过程通过观察异常信息，是 Oralce JDBC 驱动的内部方法出现了数组越界异常。为了搞清楚实际原因，在社区找到了一篇帖子。其中的一个回复写道：  The 10g driver apparently keeps a global seri">
 
 
 
 
 
 
-  <link rel="canonical" href="https://moerzhizhi.com/archives/"/>
+  <link rel="canonical" href="https://moerzhizhi.com/2018-11-18/oracle-executeBatch-exception/"/>
 
 
 
@@ -134,7 +135,7 @@
   };
 </script>
 
-  <title>归档 | 默而识之</title>
+  <title>Oracle executeBatch异常：ArrayIndexOutOfBoundsException | 默而识之</title>
   
 
 
@@ -190,7 +191,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -272,283 +273,166 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      
-      <span class="archive-page-counter">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://moerzhizhi.com/2018-11-18/oracle-executeBatch-exception/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hetoo">
+      <meta itemprop="description" content="To ask nothing.
+To expect nothing.
+To depend on nothing.
+">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="默而识之">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">Oracle executeBatch异常：ArrayIndexOutOfBoundsException
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-18 17:16:00" itemprop="dateCreated datePublished" datetime="2018-11-18T17:16:00+08:00">2018-11-18</time>
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 6 篇日志。 继续努力。
-      </span>
-      
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018-11-18/oracle-executeBatch-exception/" itemprop="url">
-              
-                <span itemprop="name">Oracle executeBatch异常：ArrayIndexOutOfBoundsException</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-18T17:16:00+08:00"
-              content="2018-11-18" >
-          11-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018-10-31/javaScript-format-timestamp/" itemprop="url">
-              
-                <span itemprop="name">JavaScript 时间戳格式转换</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-31T23:11:00+08:00"
-              content="2018-10-31" >
-          10-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018-10-31/java-get-host-address/" itemprop="url">
-              
-                <span itemprop="name">Java 取得当前程序部署的服务器 IP</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-31T23:10:00+08:00"
-              content="2018-10-31" >
-          10-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018-10-31/nginx-cluster-files-sync/" itemprop="url">
-              
-                <span itemprop="name">【转】Nginx负载均衡之后的文件上传同步</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-31T23:08:00+08:00"
-              content="2018-10-31" >
-          10-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018-10-31/form-event-prevent/" itemprop="url">
-              
-                <span itemprop="name">form 表单提交时阻止页面跳转</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-31T23:00:00+08:00"
-              content="2018-10-31" >
-          10-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-1970">1970</h1>
-          </div>
-        
-        
+          
 
-        
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/1970-01-01/about/" itemprop="url">
-              
-                <span itemprop="name">本站说明</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="1970-01-01T00:00:00+08:00"
-              content="1970-01-01" >
-          01-01
-        </time>
-      </div>
+        </div>
+      </header>
+    
 
-    </header>
-  </article>
-
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在使用 JDBC 的 <code>PreparedStatement.executeBatch()</code> 接口向 Oracle 数据库批量插入数据时，出现数组越界异常。</p>
+<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><p>通过观察异常信息，是 Oralce JDBC 驱动的内部方法出现了数组越界异常。为了搞清楚实际原因，在社区找到了一篇<a href="https://community.oracle.com/thread/599441" target="_blank" rel="noopener">帖子</a>。其中的一个回复写道：</p>
+<blockquote>
+<p>The 10g driver apparently keeps a global serial number for all parameters in the entire batch, with a “short” variable. So you can have at most 32768 parameters in the batch. I was having the same exception because I have a INSERT statement with 42 parameters and my batches can be as big as 1000 records, so 42000 &gt; 32768 and this overflows to a negative index. I reduced the batch factor to 100 to be safe, and all is well. I guess your update DML should have a larger number of parameters per record, right? (My diagnostic of the bug is just deduction from the symptoms)</p>
+</blockquote>
+<p>大体的意思是，Oracle 的 <code>preparedStatement</code> 批量执行 SQL 时，对参数个数是有上限的（针对不同版本的oracle驱动，这个上限对不同的可能是不同的），这个参数个数的含义指 <code>addBatch</code> 的次数×每条 SQL 中的参数个数。对于 Oracle 10g 的驱动来说，这个值可能是32,768，所以编程时参数个数应该小于这个值，否则报错。</p>
+<h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><p>在我的项目中，每 10,000 条提交一次，每一条中有 27 个参数。也就是说总共有 270,000 个参数，这远远超出了上限。降低 <code>addBatch</code> 的数量（如每 1,000 条提交一次）即可解决异常。</p>
+
+      
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018-10-31/javaScript-format-timestamp/" rel="next" title="JavaScript 时间戳格式转换">
+                <i class="fa fa-chevron-left"></i> JavaScript 时间戳格式转换
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -573,8 +457,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -622,6 +515,22 @@ To depend on nothing.
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决过程"><span class="nav-number">2.</span> <span class="nav-text">解决过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案"><span class="nav-number">3.</span> <span class="nav-text">方案</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -756,6 +665,10 @@ To depend on nothing.
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
 
   
 
