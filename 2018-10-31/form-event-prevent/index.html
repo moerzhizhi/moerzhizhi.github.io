@@ -108,23 +108,24 @@
 
 
 
-  <meta name="description" content="To ask nothing. To expect nothing. To depend on nothing.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="默而识之">
-<meta property="og:url" content="https://moerzhizhi.com/index.html">
+  <meta name="description" content="问题使用表单提交文件下载请求时，会造成页面跳转。使用如下方法可在表单提交时阻止页面跳转。 方案123456789&amp;lt;html&amp;gt;&amp;lt;body&amp;gt;	&amp;lt;form action=&quot;&quot; method=&quot;post&quot; target=&quot;nm_iframe&quot;&amp;gt;		&amp;lt;input type=&quot;text&quot; id=&quot;id_input_text&quot; name=&quot;nm_input_text&quot;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="form 表单提交时阻止页面跳转">
+<meta property="og:url" content="https://moerzhizhi.com/2018-10-31/form-event-prevent/index.html">
 <meta property="og:site_name" content="默而识之">
-<meta property="og:description" content="To ask nothing. To expect nothing. To depend on nothing.">
+<meta property="og:description" content="问题使用表单提交文件下载请求时，会造成页面跳转。使用如下方法可在表单提交时阻止页面跳转。 方案123456789&amp;lt;html&amp;gt;&amp;lt;body&amp;gt;	&amp;lt;form action=&quot;&quot; method=&quot;post&quot; target=&quot;nm_iframe&quot;&amp;gt;		&amp;lt;input type=&quot;text&quot; id=&quot;id_input_text&quot; name=&quot;nm_input_text&quot;">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-10-31T15:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="默而识之">
-<meta name="twitter:description" content="To ask nothing. To expect nothing. To depend on nothing.">
+<meta name="twitter:title" content="form 表单提交时阻止页面跳转">
+<meta name="twitter:description" content="问题使用表单提交文件下载请求时，会造成页面跳转。使用如下方法可在表单提交时阻止页面跳转。 方案123456789&amp;lt;html&amp;gt;&amp;lt;body&amp;gt;	&amp;lt;form action=&quot;&quot; method=&quot;post&quot; target=&quot;nm_iframe&quot;&amp;gt;		&amp;lt;input type=&quot;text&quot; id=&quot;id_input_text&quot; name=&quot;nm_input_text&quot;">
 
 
 
 
 
 
-  <link rel="canonical" href="https://moerzhizhi.com/"/>
+  <link rel="canonical" href="https://moerzhizhi.com/2018-10-31/form-event-prevent/"/>
 
 
 
@@ -134,7 +135,7 @@
   };
 </script>
 
-  <title>默而识之</title>
+  <title>form 表单提交时阻止页面跳转 | 默而识之</title>
   
 
 
@@ -190,8 +191,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -232,7 +232,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
   </li>
@@ -276,9 +276,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -313,11 +313,7 @@ To depend on nothing.
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018-10-31/form-event-prevent/" itemprop="url">
-                  form 表单提交时阻止页面跳转
-                </a>
+          <h1 class="post-title" itemprop="name headline">form 表单提交时阻止页面跳转
               
             
           </h1>
@@ -374,13 +370,9 @@ To depend on nothing.
       
 
       
-        
-          
-            <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用表单提交文件下载请求时，会造成页面跳转。使用如下方法可在表单提交时阻止页面跳转。</p>
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用表单提交文件下载请求时，会造成页面跳转。使用如下方法可在表单提交时阻止页面跳转。</p>
 <h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">target</span>=<span class="string">"nm_iframe"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"id_input_text"</span> <span class="attr">name</span>=<span class="string">"nm_input_text"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">id</span>=<span class="string">"id_submit"</span> <span class="attr">name</span>=<span class="string">"nm_submit"</span> <span class="attr">value</span>=<span class="string">"提交"</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">iframe</span> <span class="attr">id</span>=<span class="string">"id_iframe"</span> <span class="attr">name</span>=<span class="string">"nm_iframe"</span> <span class="attr">style</span>=<span class="string">"display:none;"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-          
-        
       
     </div>
 
@@ -400,151 +392,28 @@ To depend on nothing.
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://moerzhizhi.com/1970-01-01/about/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hetoo">
-      <meta itemprop="description" content="To ask nothing.
-To expect nothing.
-To depend on nothing.
-">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="默而识之">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/1970-01-01/about/" itemprop="url">
-                  本站说明
-                </a>
-              
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
+              <a href="/1970-01-01/about/" rel="next" title="本站说明">
+                <i class="fa fa-chevron-left"></i> 本站说明
+              </a>
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：1970-01-01 00:00:00" itemprop="dateCreated datePublished" datetime="1970-01-01T00:00:00+08:00">1970-01-01</time>
-            
-
-            
-          </span>
-
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>《<a href="https://moerzhizhi.com/">默而知之</a>》是一个记录技术笔记和生活思考的博客项目，由青年程序员 IcemBerry 、 Maxx 共同主理。这里记录我们的学习心得，留下我们踩过的坑，也写下生活中的观察和思考。通过自己的视角不断观察技术和社会，学习思考，精进技术，直面荒谬。冲破自我的局限，发现生活的本质。这里写下的文字本为记录自我，如能对观众有所帮助和启发将不胜荣幸。</p>
-<p>计划日后推出同名播客栏目。</p>
-<p>欢迎各界切磋，来信请寄 moerzhizhi[at]gmail.com。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -554,10 +423,11 @@ To depend on nothing.
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -582,8 +452,17 @@ To depend on nothing.
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -631,6 +510,22 @@ To depend on nothing.
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案"><span class="nav-number">2.</span> <span class="nav-text">方案</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -765,6 +660,10 @@ To depend on nothing.
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.3.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.3.0"></script>
+
+
 
   
 
