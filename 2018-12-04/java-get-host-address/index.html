@@ -108,24 +108,24 @@
 
 
 
-  <meta name="description" content="问题在使用 JDBC 的 PreparedStatement.executeBatch() 接口向 Oracle 数据库批量插入数据时，出现数组越界异常。 解决过程通过观察异常信息，是 Oralce JDBC 驱动的内部方法出现了数组越界异常。为了搞清楚实际原因，在社区找到了一篇帖子。其中的一个回复写道：  The 10g driver apparently keeps a global seri">
+  <meta name="description" content="问题之前使用 InetAddress.getLocalHost().getHostAddress() 时，在开发机上可以取得正确的 IP，但是部署到 Linux 服务器之后，取到的值变成了 127.0.0.1 。如何能取到真正的 IP 呢？ 方案123456789101112131415161718public static InetAddress getCurrentIp() &amp;#123;	tr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Oracle executeBatch异常：ArrayIndexOutOfBoundsException">
-<meta property="og:url" content="https://moerzhizhi.com/2018-11-18/oracle-executeBatch-exception/index.html">
+<meta property="og:title" content="Java 取得当前程序部署的服务器 IP">
+<meta property="og:url" content="https://moerzhizhi.com/2018-12-04/java-get-host-address/index.html">
 <meta property="og:site_name" content="默而识之">
-<meta property="og:description" content="问题在使用 JDBC 的 PreparedStatement.executeBatch() 接口向 Oracle 数据库批量插入数据时，出现数组越界异常。 解决过程通过观察异常信息，是 Oralce JDBC 驱动的内部方法出现了数组越界异常。为了搞清楚实际原因，在社区找到了一篇帖子。其中的一个回复写道：  The 10g driver apparently keeps a global seri">
+<meta property="og:description" content="问题之前使用 InetAddress.getLocalHost().getHostAddress() 时，在开发机上可以取得正确的 IP，但是部署到 Linux 服务器之后，取到的值变成了 127.0.0.1 。如何能取到真正的 IP 呢？ 方案123456789101112131415161718public static InetAddress getCurrentIp() &amp;#123;	tr">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-18T09:18:42.539Z">
+<meta property="og:updated_time" content="2018-12-04T02:14:40.584Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Oracle executeBatch异常：ArrayIndexOutOfBoundsException">
-<meta name="twitter:description" content="问题在使用 JDBC 的 PreparedStatement.executeBatch() 接口向 Oracle 数据库批量插入数据时，出现数组越界异常。 解决过程通过观察异常信息，是 Oralce JDBC 驱动的内部方法出现了数组越界异常。为了搞清楚实际原因，在社区找到了一篇帖子。其中的一个回复写道：  The 10g driver apparently keeps a global seri">
+<meta name="twitter:title" content="Java 取得当前程序部署的服务器 IP">
+<meta name="twitter:description" content="问题之前使用 InetAddress.getLocalHost().getHostAddress() 时，在开发机上可以取得正确的 IP，但是部署到 Linux 服务器之后，取到的值变成了 127.0.0.1 。如何能取到真正的 IP 呢？ 方案123456789101112131415161718public static InetAddress getCurrentIp() &amp;#123;	tr">
 
 
 
 
 
 
-  <link rel="canonical" href="https://moerzhizhi.com/2018-11-18/oracle-executeBatch-exception/"/>
+  <link rel="canonical" href="https://moerzhizhi.com/2018-12-04/java-get-host-address/"/>
 
 
 
@@ -135,7 +135,7 @@
   };
 </script>
 
-  <title>Oracle executeBatch异常：ArrayIndexOutOfBoundsException | 默而识之</title>
+  <title>Java 取得当前程序部署的服务器 IP | 默而识之</title>
   
 
 
@@ -293,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://moerzhizhi.com/2018-11-18/oracle-executeBatch-exception/">
+    <link itemprop="mainEntityOfPage" href="https://moerzhizhi.com/2018-12-04/java-get-host-address/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hetoo">
@@ -313,7 +313,7 @@ To depend on nothing.
 
         
         
-          <h1 class="post-title" itemprop="name headline">Oracle executeBatch异常：ArrayIndexOutOfBoundsException
+          <h1 class="post-title" itemprop="name headline">Java 取得当前程序部署的服务器 IP
               
             
           </h1>
@@ -338,7 +338,7 @@ To depend on nothing.
                 
               
 
-              <time title="创建时间：2018-11-18 17:18:42" itemprop="dateCreated datePublished" datetime="2018-11-18T17:18:42+08:00">2018-11-18</time>
+              <time title="创建时间：2018-12-04 10:14:40" itemprop="dateCreated datePublished" datetime="2018-12-04T10:14:40+08:00">2018-12-04</time>
             
 
             
@@ -370,14 +370,8 @@ To depend on nothing.
       
 
       
-        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在使用 JDBC 的 <code>PreparedStatement.executeBatch()</code> 接口向 Oracle 数据库批量插入数据时，出现数组越界异常。</p>
-<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><p>通过观察异常信息，是 Oralce JDBC 驱动的内部方法出现了数组越界异常。为了搞清楚实际原因，在社区找到了一篇<a href="https://community.oracle.com/thread/599441" target="_blank" rel="noopener">帖子</a>。其中的一个回复写道：</p>
-<blockquote>
-<p>The 10g driver apparently keeps a global serial number for all parameters in the entire batch, with a “short” variable. So you can have at most 32768 parameters in the batch. I was having the same exception because I have a INSERT statement with 42 parameters and my batches can be as big as 1000 records, so 42000 &gt; 32768 and this overflows to a negative index. I reduced the batch factor to 100 to be safe, and all is well. I guess your update DML should have a larger number of parameters per record, right? (My diagnostic of the bug is just deduction from the symptoms)</p>
-</blockquote>
-<p>大体的意思是，Oracle 的 <code>preparedStatement</code> 批量执行 SQL 时，对参数个数是有上限的（针对不同版本的oracle驱动，这个上限对不同的可能是不同的），这个参数个数的含义指 <code>addBatch</code> 的次数×每条 SQL 中的参数个数。对于 Oracle 10g 的驱动来说，这个值可能是32,768，所以编程时参数个数应该小于这个值，否则报错。</p>
-<h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><p>在我的项目中，每 10,000 条提交一次，每一条中有 27 个参数。也就是说总共有 270,000 个参数，这远远超出了上限。降低 <code>addBatch</code> 的数量（如每 1,000 条提交一次）即可解决异常。</p>
-
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>之前使用 <code>InetAddress.getLocalHost().getHostAddress()</code> 时，在开发机上可以取得正确的 IP，但是部署到 Linux 服务器之后，取到的值变成了 <code>127.0.0.1</code> 。如何能取到真正的 IP 呢？</p>
+<h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> InetAddress <span class="title">getCurrentIp</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">try</span> &#123;</span><br><span class="line">		Enumeration&lt;NetworkInterface&gt; networkInterfaces = NetworkInterface.getNetworkInterfaces();</span><br><span class="line">		<span class="keyword">while</span> (networkInterfaces.hasMoreElements()) &#123;</span><br><span class="line">			NetworkInterface ni = (NetworkInterface) networkInterfaces.nextElement();</span><br><span class="line">			Enumeration&lt;InetAddress&gt; nias = ni.getInetAddresses();</span><br><span class="line">			<span class="keyword">while</span> (nias.hasMoreElements()) &#123;</span><br><span class="line">				InetAddress ia = (InetAddress) nias.nextElement();</span><br><span class="line">				<span class="keyword">if</span> (!ia.isLinkLocalAddress() &amp;&amp; !ia.isLoopbackAddress() &amp;&amp; ia <span class="keyword">instanceof</span> Inet4Address) &#123;</span><br><span class="line">					<span class="keyword">return</span> ia;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="keyword">catch</span> (SocketException e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -404,8 +398,8 @@ To depend on nothing.
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/1970-01-01/about/" rel="next" title="本站说明">
-                <i class="fa fa-chevron-left"></i> 本站说明
+              <a href="/2018-12-04/javaScript-format-timestamp/" rel="next" title="JavaScript 时间戳格式转换">
+                <i class="fa fa-chevron-left"></i> JavaScript 时间戳格式转换
               </a>
             
           </div>
@@ -414,8 +408,8 @@ To depend on nothing.
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018-11-18/javaScript-format-timestamp/" rel="prev" title="JavaScript 时间戳格式转换">
-                JavaScript 时间戳格式转换 <i class="fa fa-chevron-right"></i>
+              <a href="/2018-12-04/form-event-prevent/" rel="prev" title="form 表单提交时阻止页面跳转">
+                form 表单提交时阻止页面跳转 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -529,7 +523,7 @@ To depend on nothing.
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决过程"><span class="nav-number">2.</span> <span class="nav-text">解决过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案"><span class="nav-number">3.</span> <span class="nav-text">方案</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案"><span class="nav-number">2.</span> <span class="nav-text">方案</span></a></li></ol></div>
             
 
           </div>

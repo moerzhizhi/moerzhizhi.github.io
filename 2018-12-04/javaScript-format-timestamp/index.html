@@ -108,24 +108,24 @@
 
 
 
-  <meta name="description" content="问题使用表单提交文件下载请求时，会造成页面跳转。使用如下方法可在表单提交时阻止页面跳转。 方案123456789&amp;lt;html&amp;gt;&amp;lt;body&amp;gt;	&amp;lt;form action=&quot;&quot; method=&quot;post&quot; target=&quot;nm_iframe&quot;&amp;gt;		&amp;lt;input type=&quot;text&quot; id=&quot;id_input_text&quot; name=&quot;nm_input_text&quot;">
+  <meta name="description" content="问题将时间戳转换为指定格式的字符串。 方案12345678910111213141516171819function formatDate(time,format=&apos;YY-MM-DD hh:mm:ss&apos;)&amp;#123;	var date = new Date(time);	var year = date.getFullYear(),	    month = date.getMonth()+1,//月">
 <meta property="og:type" content="article">
-<meta property="og:title" content="form 表单提交时阻止页面跳转">
-<meta property="og:url" content="https://moerzhizhi.com/2018-11-18/form-event-prevent/index.html">
+<meta property="og:title" content="JavaScript 时间戳格式转换">
+<meta property="og:url" content="https://moerzhizhi.com/2018-12-04/javaScript-format-timestamp/index.html">
 <meta property="og:site_name" content="默而识之">
-<meta property="og:description" content="问题使用表单提交文件下载请求时，会造成页面跳转。使用如下方法可在表单提交时阻止页面跳转。 方案123456789&amp;lt;html&amp;gt;&amp;lt;body&amp;gt;	&amp;lt;form action=&quot;&quot; method=&quot;post&quot; target=&quot;nm_iframe&quot;&amp;gt;		&amp;lt;input type=&quot;text&quot; id=&quot;id_input_text&quot; name=&quot;nm_input_text&quot;">
+<meta property="og:description" content="问题将时间戳转换为指定格式的字符串。 方案12345678910111213141516171819function formatDate(time,format=&apos;YY-MM-DD hh:mm:ss&apos;)&amp;#123;	var date = new Date(time);	var year = date.getFullYear(),	    month = date.getMonth()+1,//月">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-18T09:18:42.539Z">
+<meta property="og:updated_time" content="2018-12-04T02:14:40.584Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="form 表单提交时阻止页面跳转">
-<meta name="twitter:description" content="问题使用表单提交文件下载请求时，会造成页面跳转。使用如下方法可在表单提交时阻止页面跳转。 方案123456789&amp;lt;html&amp;gt;&amp;lt;body&amp;gt;	&amp;lt;form action=&quot;&quot; method=&quot;post&quot; target=&quot;nm_iframe&quot;&amp;gt;		&amp;lt;input type=&quot;text&quot; id=&quot;id_input_text&quot; name=&quot;nm_input_text&quot;">
+<meta name="twitter:title" content="JavaScript 时间戳格式转换">
+<meta name="twitter:description" content="问题将时间戳转换为指定格式的字符串。 方案12345678910111213141516171819function formatDate(time,format=&apos;YY-MM-DD hh:mm:ss&apos;)&amp;#123;	var date = new Date(time);	var year = date.getFullYear(),	    month = date.getMonth()+1,//月">
 
 
 
 
 
 
-  <link rel="canonical" href="https://moerzhizhi.com/2018-11-18/form-event-prevent/"/>
+  <link rel="canonical" href="https://moerzhizhi.com/2018-12-04/javaScript-format-timestamp/"/>
 
 
 
@@ -135,7 +135,7 @@
   };
 </script>
 
-  <title>form 表单提交时阻止页面跳转 | 默而识之</title>
+  <title>JavaScript 时间戳格式转换 | 默而识之</title>
   
 
 
@@ -293,7 +293,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://moerzhizhi.com/2018-11-18/form-event-prevent/">
+    <link itemprop="mainEntityOfPage" href="https://moerzhizhi.com/2018-12-04/javaScript-format-timestamp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Hetoo">
@@ -313,7 +313,7 @@ To depend on nothing.
 
         
         
-          <h1 class="post-title" itemprop="name headline">form 表单提交时阻止页面跳转
+          <h1 class="post-title" itemprop="name headline">JavaScript 时间戳格式转换
               
             
           </h1>
@@ -338,7 +338,7 @@ To depend on nothing.
                 
               
 
-              <time title="创建时间：2018-11-18 17:18:42" itemprop="dateCreated datePublished" datetime="2018-11-18T17:18:42+08:00">2018-11-18</time>
+              <time title="创建时间：2018-12-04 10:14:40" itemprop="dateCreated datePublished" datetime="2018-12-04T10:14:40+08:00">2018-12-04</time>
             
 
             
@@ -370,8 +370,10 @@ To depend on nothing.
       
 
       
-        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用表单提交文件下载请求时，会造成页面跳转。使用如下方法可在表单提交时阻止页面跳转。</p>
-<h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span> <span class="attr">method</span>=<span class="string">"post"</span> <span class="attr">target</span>=<span class="string">"nm_iframe"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"id_input_text"</span> <span class="attr">name</span>=<span class="string">"nm_input_text"</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">id</span>=<span class="string">"id_submit"</span> <span class="attr">name</span>=<span class="string">"nm_submit"</span> <span class="attr">value</span>=<span class="string">"提交"</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">iframe</span> <span class="attr">id</span>=<span class="string">"id_iframe"</span> <span class="attr">name</span>=<span class="string">"nm_iframe"</span> <span class="attr">style</span>=<span class="string">"display:none;"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>将时间戳转换为指定格式的字符串。</p>
+<h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">formatDate</span>(<span class="params">time,format=<span class="string">'YY-MM-DD hh:mm:ss'</span></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>(time);</span><br><span class="line">	<span class="keyword">var</span> year = date.getFullYear(),</span><br><span class="line">	    month = date.getMonth()+<span class="number">1</span>,<span class="comment">//月份是从0开始的</span></span><br><span class="line">	    day = date.getDate(),</span><br><span class="line">	    hour = date.getHours(),</span><br><span class="line">	    min = date.getMinutes(),</span><br><span class="line">	    sec = date.getSeconds();</span><br><span class="line">	<span class="keyword">var</span> preArr = <span class="built_in">Array</span>.apply(<span class="literal">null</span>,<span class="built_in">Array</span>(<span class="number">10</span>)).map(<span class="function"><span class="keyword">function</span>(<span class="params">elem, index</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">'0'</span>+index;</span><br><span class="line">	&#125;);<span class="comment">//开个长度为10的数组 格式为 00 01 02 03</span></span><br><span class="line">	<span class="keyword">var</span> newTime = format.replace(<span class="regexp">/YY/g</span>,year)</span><br><span class="line">                        .replace(<span class="regexp">/MM/g</span>,preArr[month]||month)</span><br><span class="line">                        .replace(<span class="regexp">/DD/g</span>,preArr[day]||day)</span><br><span class="line">                        .replace(<span class="regexp">/hh/g</span>,preArr[hour]||hour)</span><br><span class="line">                        .replace(<span class="regexp">/mm/g</span>,preArr[min]||min)</span><br><span class="line">                        .replace(<span class="regexp">/ss/g</span>,preArr[sec]||sec);</span><br><span class="line">	<span class="keyword">return</span> newTime;         </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="注意！"><a href="#注意！" class="headerlink" title="注意！"></a>注意！</h2><p>此方案存在 IE 兼容性问题。可以使用 <code>arguments[i]</code> 为参数设置默认值，<code>i</code> 为参数的位置，第一个为 0。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">example</span>(<span class="params">a, b</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> a = <span class="built_in">arguments</span>[<span class="number">0</span>] || <span class="number">1</span>;<span class="comment">//设置第一个参数的默认值为1</span></span><br><span class="line">	<span class="keyword">var</span> b = <span class="built_in">arguments</span>[<span class="number">1</span>] || <span class="number">2</span>;<span class="comment">//设置第二个参数的默认值为2</span></span><br><span class="line">	···</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -398,8 +400,8 @@ To depend on nothing.
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018-11-18/java-get-host-address/" rel="next" title="Java 取得当前程序部署的服务器 IP">
-                <i class="fa fa-chevron-left"></i> Java 取得当前程序部署的服务器 IP
+              <a href="/2018-12-04/nginx-cluster-files-sync/" rel="next" title="【转】Nginx负载均衡之后的文件上传同步">
+                <i class="fa fa-chevron-left"></i> 【转】Nginx负载均衡之后的文件上传同步
               </a>
             
           </div>
@@ -407,6 +409,10 @@ To depend on nothing.
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018-12-04/java-get-host-address/" rel="prev" title="Java 取得当前程序部署的服务器 IP">
+                Java 取得当前程序部署的服务器 IP <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -519,7 +525,7 @@ To depend on nothing.
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案"><span class="nav-number">2.</span> <span class="nav-text">方案</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案"><span class="nav-number">2.</span> <span class="nav-text">方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意！"><span class="nav-number">3.</span> <span class="nav-text">注意！</span></a></li></ol></div>
             
 
           </div>
