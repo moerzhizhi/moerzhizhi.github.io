@@ -397,15 +397,13 @@ font:
   # Global font settings used for all elements in <body>.
   global:
     external: false
-    family: Lato
-    size:
+    family: "Noto Sans", sans-serif
 
   # Font settings for Headlines (H1, H2, H3, H4, H5, H6).
   # Fallback to `global` font settings.
   headings:
     external: false
     family: "Noto Sans", sans-serif
-    size:
 
   # Font settings for posts.
   # Fallback to `global` font settings.
@@ -417,14 +415,12 @@ font:
   # Fallback to `global` font settings.
   logo:
     external: false
-    family:
-    size:
+    family: "Noto Serif", serif
 
   # Font settings for <code> and code blocks.
   codes:
     external: false
     family: consolas, sans-serif
-    size:
 
 
 # ---------------------------------------------------------------
