@@ -385,7 +385,7 @@ sidebar_width:
 # Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
 # ---------------------------------------------------------------
 font:
-  enable: false
+  enable: true
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
   host:
@@ -397,33 +397,33 @@ font:
 
   # Global font settings used for all elements in <body>.
   global:
-    external: false
-    family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif
+    external: true
+    family: sans-serif
     #size:
 
   # Font settings for Headlines (H1, H2, H3, H4, H5, H6).
   # Fallback to `global` font settings.
   headings:
-    external: false
-    family: "Noto Sans", "Microsoft YaHei", "微软雅黑", sans-serif
+    external: true
+    family: sans-serif
     #size:
 
   # Font settings for posts.
   # Fallback to `global` font settings.
   posts:
-    external: false
-    family: "Noto Serif", SimSun, "宋体", serif
+    external: true
+    family: serif
 
   # Font settings for Logo.
   # Fallback to `global` font settings.
   logo:
-    external: false
-    family: "Noto Serif", SimSun, "宋体", serif
+    external: true
+    family: serif
     #size:
 
   # Font settings for <code> and code blocks.
   codes:
-    external: false
+    external: true
     family: consolas, sans-serif
     #size:
 
